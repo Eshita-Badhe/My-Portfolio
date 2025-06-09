@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eshita Badhe | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="star-container"></div>
+
+
+    <!-- Scroll Nav Bar -->
+    <header id="scroll-navbar" class="scroll-nav">
+        <div class="top-name">Eshita Badhe</div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#edu">Education</a></li>
+                <li><a href="#cert">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="top">
+        <div class="profile">
+            <div class="profile-pic"></div>
+        </div>
+        <div class="profile-text">
+            <div class="name">Eshita Badhe</div>
+            <div class="icons">
+            <a href="#" title="Email" onclick="navigator.clipboard.writeText('sge.eshita31gb@gmail.com'); alert('Email copied!');"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/eshita-badhe-31gb/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Eshita-Badhe" title="Github"><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-solid fa-terminal" title="Leetcode"></i></a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    
+    <!-- Content Sections -->
+    <div class="content">
+        <div id="about" class="about">About Section</div>
+        <div id="projects" class="projects">Projects Section</div>
+        <div id="edu" class="edu">Education Section</div>
+        <div id="cert" class="achievements">Achievements Section</div>
+        <div id="skills" class="skills">Skills Section</div>
+        <div class="resume">Resume Section</div>
+        <div id="contact" class="contact">Contact Section</div>
+    </div>
+
+    
+    <script>
+    
+    //Sparkling stars background
+    const numStars = 200;
+    const container = document.querySelector('.star-container');
+
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        star.style.width = star.style.height = `${Math.random() * 2 + 1}px`;
+        container.appendChild(star);
+    }
+
+    //Scrolling effect to navbar
+    const navbar = document.getElementById('scroll-navbar');
+    const profileTop = document.querySelector('.top');
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        if (scrollY > 300) {
+        navbar.style.display = 'flex';
+        profileTop.style.opacity = '0';
+        profileTop.style.pointerEvents = 'none';
+        } else {
+        navbar.style.display = 'none';
+        profileTop.style.opacity = '1';
+        profileTop.style.pointerEvents = 'auto';
+        }
+    });
+    </script>
+
+    <footer>
+        Made by Eshita
+    </footer>
+</body>
+</html>

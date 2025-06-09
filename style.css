@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Twinkling stars */
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    opacity: 0;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+
+/* Profile Section */
+.profile {
+    background-color: #0f758a;
+    padding: 50px 0 20px;
+    text-align: center;
+    position: relative;
+    height: 150px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    transition: opacity 0.5s ease;
+}
+
+.profile-pic {
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid black;
+    bottom: -70%;
+}
+
+.profile-text {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.name {
+    font-size: 3rem;
+    color: white;
+    margin-left: 60px;
+}
+
+.icons {
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 35%;
+}
+
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.icons i {
+    padding: 8px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.icons i:hover {
+    transform: scale(1.2);
+}
+
+/* Scroll Navigation Bar */
+.scroll-nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0f758a;
+    padding: 15px 20px;
+    text-align: center;
+    transition: top 0.3s ease-in-out;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    margin-right: 1px;
+}
+
+.nav-links
+{
+    width: 55%;
+    margin-right: 20px;
+}
+
+.scroll-nav ul {
+    list-style: none;
+    margin: 0;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.scroll-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    font-family: 'Fira Code', monospace;
+}
+
+.scroll-nav ul li a:hover {
+    color: #00ffff;
+}
+
+/* Optional sections styling */
+.content div {
+    padding: 100px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.to-top
+{
+    background-color: aliceblue;
+    border-radius: 50%;
+    color: black;
+}
+
+footer {
+  color: #00ffff;
+  text-align: center;
+  padding: 5px;
+  font-size: 5px;
+}
