@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eshita Badhe | Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,7 +39,7 @@
             <a href="#" title="Email" onclick="navigator.clipboard.writeText('sge.eshita31gb@gmail.com'); alert('Email copied!');"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/eshita-badhe-31gb/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/Eshita-Badhe" title="Github"><i class="fa-brands fa-github"></i></a>
-            <a href=""><i class="fa-solid fa-terminal" title="Leetcode"></i></a>
+            <a href="https://leetcode.com/Eshita_Badhe/"><i class="fa-solid fa-terminal" title="Leetcode"></i></a>
             </div>
         </div>
         </div>
@@ -47,7 +48,28 @@
     
     <!-- Content Sections -->
     <div class="content">
-        <div id="about" class="about">About Section</div>
+        <!--About section-->
+        <div id="about" class="about">
+            <div class="terminal">
+                <div class="title"><i class="fa-solid fa-code"></i>   <span>About Me</span></div>
+                <div class="code">
+                    <pre>Hi👋, I'm Eshita Badhe, a third-year Diploma Computer Science student at Government Polytechnic, Pune🎓. 
+I am interested in software development and web development🌐, which I have explored through various coursework and projects.
+
+I have skills in C, C++, Python, OOP, HTML, CSS, JavaScript, and SQL. 
+Additionally, I participated in technical events at BVCOEP, PCP, COEP, and PICT 🏆.
+I've worked on various projects like integrating web AI models and much more.
+
+Beyond academics and projects, my hobbies include exploring new technologies , 
+journaling, traveling, and sketching in my free time.
+
+After my diploma, I plan to pursue graduation in the same field 🎯 
+and hope to contribute to creating innovative technologies that solve real-world problems 🌍.
+                    </pre>
+                </div>
+            </div>
+        </div>
+
         <div id="projects" class="projects">Projects Section</div>
         <div id="edu" class="edu">Education Section</div>
         <div id="cert" class="achievements">Achievements Section</div>
@@ -56,6 +78,7 @@
         <div id="contact" class="contact">Contact Section</div>
     </div>
 
+    <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     
     <script>
     
@@ -79,7 +102,7 @@
 
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
-        if (scrollY > 300) {
+        if (scrollY > 200) {
         navbar.style.display = 'flex';
         profileTop.style.opacity = '0';
         profileTop.style.pointerEvents = 'none';
@@ -89,10 +112,30 @@
         profileTop.style.pointerEvents = 'auto';
         }
     });
+
+    //Scroll to top
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+        } else {
+        scrollTopBtn.style.display = "none";
+        }
+    };
+
+    scrollTopBtn.onclick = function () {
+        window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+        });
+    };
     </script>
 
     <footer>
         Made by Eshita
     </footer>
+
+
 </body>
 </html>
