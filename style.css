@@ -36,23 +36,28 @@ body {
     padding: 50px 0 20px;
     text-align: center;
     position: relative;
-    height: 10vw;
+    height: 15vw;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     transition: opacity 0.5s ease;
 }
 
 .profile-pic {
-    width: 20vw;
-    height: 20vw;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 5px solid black;
-    bottom: -70%;
+  width: 20vw;
+  height: 20vw;
+  background-image: url('images/profile.jpg');
+  background-size: cover;        /* Ensures the image covers the circle */
+  background-position: center;   /* Centers the image inside the circle */
+  background-repeat: no-repeat;  /* Prevents image repetition */
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid black;
+  box-shadow: 0 0 15px #00ffff;  /* Optional: glow effect */
+  bottom: -70%;
 }
+
 
 .profile-text {
     margin-top: 0;
@@ -68,7 +73,13 @@ body {
     color: white;
     margin-left: 5vw;
     filter: drop-shadow(0 0 3px cyan);
+    transition: transform 0.2s ease;
 
+}
+
+.name:hover
+{
+    transform: scale(1.2);
 }
 
 .icons {
@@ -104,7 +115,7 @@ a
     justify-content: space-between;
     position: fixed;
     top: 0;
-    width: 97.5%;
+    width: 100%;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: #0f758a;
@@ -113,6 +124,7 @@ a
     transition: top 0.3s ease-in-out;
     border-bottom-right-radius: 30px;
     color: white;
+    z-index: 9999;
 }
 
 
@@ -159,7 +171,7 @@ footer {
 
 
 /* About Section -- Terminal */
-.about {
+.about{
     background-color: black;
     color: #66fcf1;
     display: flex;
@@ -218,3 +230,382 @@ footer {
   background-color: #00cccc;
 }
 
+.projects , .edu 
+{   
+    background-color: black;
+    color: #66fcf1;
+    font-family: 'Fira Code', monospace;
+    padding-top: 50px;
+}
+.sections
+{ 
+    font-size: 3rem;
+    color: white;
+    filter: drop-shadow(0 0 5px cyan);
+    text-align: center;
+}
+
+/* Project Section */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 25rem;
+}
+
+.arrow {
+  font-size: 22px;
+  background-color: #00ffff;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+  50% { box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff; }
+  100% { box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+}
+
+
+.arrow:hover {
+  transform: scale(1.1);
+  background-color: #00cccc;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 75%;
+  height: 30rem;
+  perspective: 2000px;
+}
+
+.card {
+  position: absolute;
+  width: 40%;
+  height: 20rem;
+  background: black;
+  border: 4px solid #66fcf1;
+  box-shadow: 0 0 15px #00ffcc;
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.4s ease, opacity 0.4s ease, filter 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.card-header {
+    font-weight: bold;
+    background-color: #66fcf1;
+    color: black;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-image {
+  height: fit-content;
+  margin: 10px 0;
+  border: 4px solid #aee4f8;
+
+}
+
+.card-desc {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.card-link {
+  color: #0f758a;
+  font-weight: bold;
+  text-decoration: none;
+  transform: translateX(0) scale(1.1);
+}
+
+.card-link:hover
+{
+  transform: scale(1.15);
+}
+
+/* Positioning the visible cards */
+.card.active {
+  transform: translateX(0) scale(1.1);
+  z-index: 3;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 0 0 35px cyan;
+}
+
+.card.left {
+  transform: translateX(-300px) rotateY(30deg) scale(0.9);
+  z-index: 2;
+  opacity: 0.7;
+}
+.card.right {
+  transform: translateX(300px) rotateY(-30deg) scale(0.9);
+  z-index: 2;
+  opacity: 0.7;
+}
+
+
+/* Education section */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+  font-size: 22px; /* Base rem size */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  max-width: 43.75rem; /* 700px */
+  margin: 3rem auto;
+  padding: 0 1.5rem 3rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-line-dotted {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  right: 8%;
+  border-top: 0.125rem dotted #0ff;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.timeline-line-progress {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  height: 0.125rem;
+  background-color: cyan;
+  border-radius: 0.0625rem;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 0%;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 0.9375rem cyan;
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  z-index: 3;
+  flex: 1 1 0;
+  min-width: 6rem;
+  max-width: 6rem;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Circle */
+.circle {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: black;
+  border: 0.1875rem solid cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 1.25rem cyan;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: -0.75rem;
+  left: -0.75rem;
+  right: -0.75rem;
+  bottom: -0.75rem;
+  border-radius: 50%;
+  background: cyan;
+  filter: blur(1.25rem);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.timeline-item.active .circle::before {
+  opacity: 1;
+}
+
+.timeline-item:focus {
+  outline: none;
+}
+
+/* Active Ring Animation */
+.circle.active-ring::after {
+  content: "";
+  position: absolute;
+  top: -0.625rem;
+  left: -0.625rem;
+  right: -0.625rem;
+  bottom: -0.625rem;
+  border: 0.125rem solid cyan;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  animation: rotate-ring 2s linear infinite;
+}
+
+@keyframes rotate-ring {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text inside Circle */
+.circle-text {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: black;
+  text-align: center;
+  white-space: normal;
+  padding: 0.25rem;
+  z-index: 2;
+  transition: all 0.3s ease;
+  user-select: none;
+  text-shadow: 0 0 0.3125rem #0ff, 0 0 0.625rem #0ff;
+}
+
+.timeline-item.active .circle-text {
+  color: cyan;
+}
+
+/* Nav Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0.75rem 0 2rem;
+}
+
+button.nav-btn {
+  all: unset;
+  cursor: pointer;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background-color: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 0.75rem cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+button.nav-btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+button.nav-btn:focus {
+  outline: 0.125rem solid cyan;
+}
+
+button.nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.material-icons {
+  font-size: 1.75rem;
+  color: cyan;
+}
+
+/* Content Box */
+.content-box {
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 2rem;
+  font-size: 1.125rem;
+  color: cyan;
+  line-height: 1.5;
+  border: 0.125rem solid cyan;
+  box-shadow: 0 0 0.9375rem cyan;
+  white-space: pre-line;
+}
+
+/* Responsive */
+@media (max-width: 460px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .timeline-item {
+    max-width: 5rem;
+    min-width: 5rem;
+    height: 4.25rem;
+  }
+
+  .circle {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .circle-text {
+    font-size: 0.8125rem;
+  }
+
+  button.nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .material-icons {
+    font-size: 1.5rem;
+  }
+
+  .content-box {
+    font-size: 1rem;
+    padding: 1.25rem 1rem;
+  }
+}

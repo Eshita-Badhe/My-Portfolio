@@ -34,7 +34,7 @@
             <div class="profile-pic"></div>
         </div>
         <div class="profile-text">
-            <div class="name">Eshita Badhe</div>
+            <a href="index.html" title="Eshita's Portfolio"><div class="name">Eshita Badhe</div></a>
             <div class="icons">
             <a href="#" title="Email" onclick="navigator.clipboard.writeText('sge.eshita31gb@gmail.com'); alert('Email copied!');"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/eshita-badhe-31gb/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
@@ -53,25 +53,71 @@
             <div class="terminal">
                 <div class="title"><i class="fa-solid fa-code"></i>   <span>About Me</span></div>
                 <div class="code">
-                    <pre>Hi👋, I'm Eshita Badhe, a third-year Diploma Computer Science student at Government Polytechnic, Pune🎓. 
-I am interested in software development and web development🌐, which I have explored through various coursework and projects.
+                    <pre>Hi👋, I’m Eshita Badhe, a passionate Software and Web Developer currently in my third year of Diploma in Computer Science at Government Polytechnic, Pune. I’m someone who loves diving into the depths of programming, exploring new technical skills, tech events, and building projects that reflect what I learn 💻✨. I’ve gained hands-on experience with C, C++, Python, OOP, HTML, CSS, JavaScript, and SQL, and I enjoy turning these skills into something real and exciting.
 
-I have skills in C, C++, Python, OOP, HTML, CSS, JavaScript, and SQL. 
-Additionally, I participated in technical events at BVCOEP, PCP, COEP, and PICT 🏆.
-I've worked on various projects like integrating web AI models and much more.
+I’ve actively participated in technical events hosted by BVCOEP, PCP, COEP, and PICT, which helped me expand my horizons and learn through collaboration 🚀.My core interests revolve around AI integration, discovering how AI really works, frontend development, digging into tech facts, and even exploring prompt engineering 🧠🌐. Right now, I’m working on a full-scale web development project that brings together my DSA logic and web development skills in one dynamic creation!
 
-Beyond academics and projects, my hobbies include exploring new technologies , 
-journaling, traveling, and sketching in my free time.
+Project-wise, I’ve built fun quiz games using C and JavaScript, developed static websites like an online bookstore, and worked on a news assistant web app that includes both AI and database integration 📰🤖. I’m currently looking for internship opportunities to gain real-world experience, contribute meaningfully, and team up with tech learning buddies who share my curiosity and energy!
 
-After my diploma, I plan to pursue graduation in the same field 🎯 
-and hope to contribute to creating innovative technologies that solve real-world problems 🌍.
+Apart from academics, I enjoy journaling, traveling, sketching, and exploring tech 🌍✍️🎨. 
+
+My motivation -
+--- 🔥 “Believe in yourself.”
+--- 💪 “I was the best. I am the best. I will be the best.”
                     </pre>
                 </div>
             </div>
         </div>
 
-        <div id="projects" class="projects">Projects Section</div>
-        <div id="edu" class="edu">Education Section</div>
+        <!--Project Section-->
+        <div id="projects" class="projects">
+            <div class="sections">Projects</div>
+            <div class="carousel-wrapper">
+                <button class="arrow left"><i class="fa-solid fa-arrow-left"></i></button>
+
+                <div class="carousel" id="carousel">
+                    <!--Cards-->
+                </div>
+
+                <button class="arrow right"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div id="edu" class="edu">
+            <div class="sections">Education</div>
+            <main class="container" role="main" aria-label="Timeline navigation content">
+                <section class="timeline" aria-label="Timeline with three points">
+                <div class="timeline-line-dotted" aria-hidden="true"></div>
+                <div class="timeline-line-progress" aria-hidden="true"></div>
+                <div class="timeline-item" data-index="0" tabindex="0" aria-current="step" role="button" aria-label="Timeline step School, active">
+                    <div class="circle active-ring" >
+                    <span class="circle-text">School</span>
+                    </div>
+                </div>
+                <div class="timeline-item" data-index="1" tabindex="-1" role="button" aria-label="Timeline step 10th">
+                    <div class="circle">
+                    <span class="circle-text">10th</span>
+                    </div>
+                </div>
+                <div class="timeline-item" data-index="2" tabindex="-1" role="button" aria-label="Timeline step Diploma">
+                    <div class="circle">
+                    <span class="circle-text">Diploma</span>
+                    </div>
+                </div>
+                </section>
+                <section class="nav-buttons" role="navigation" aria-label="Timeline navigation controls">
+                <button class="nav-btn" id="prevBtn" aria-label="Previous timeline point" disabled>
+                    <span class="material-icons" aria-hidden="true"><i class="fa-solid fa-arrow-left"></i></span>
+                </button>
+                <button class="nav-btn" id="nextBtn" aria-label="Next timeline point">
+                    <span class="material-icons" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+                </section>
+                <section class="content-box" aria-live="polite" aria-atomic="true" tabindex="0">
+                Loading content...
+                </section>
+            </main>
+        </div>
         <div id="cert" class="achievements">Achievements Section</div>
         <div id="skills" class="skills">Skills Section</div>
         <div class="resume">Resume Section</div>
@@ -80,62 +126,11 @@ and hope to contribute to creating innovative technologies that solve real-world
 
     <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     
-    <script>
-    
-    //Sparkling stars background
-    const numStars = 200;
-    const container = document.querySelector('.star-container');
-
-    for (let i = 0; i < numStars; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 5}s`;
-        star.style.width = star.style.height = `${Math.random() * 2 + 1}px`;
-        container.appendChild(star);
-    }
-
-    //Scrolling effect to navbar
-    const navbar = document.getElementById('scroll-navbar');
-    const profileTop = document.querySelector('.top');
-
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        if (scrollY > 200) {
-        navbar.style.display = 'flex';
-        profileTop.style.opacity = '0';
-        profileTop.style.pointerEvents = 'none';
-        } else {
-        navbar.style.display = 'none';
-        profileTop.style.opacity = '1';
-        profileTop.style.pointerEvents = 'auto';
-        }
-    });
-
-    //Scroll to top
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    window.onscroll = function () {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollTopBtn.style.display = "block";
-        } else {
-        scrollTopBtn.style.display = "none";
-        }
-    };
-
-    scrollTopBtn.onclick = function () {
-        window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-        });
-    };
-    </script>
-
     <footer>
         Made by Eshita
     </footer>
 
+    <script src="script.js"></script>
 
 </body>
 </html>
