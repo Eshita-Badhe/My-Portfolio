@@ -247,6 +247,151 @@ updateCarousel();
     // Focus active timeline item for accessibility
     updateTimeline(activeIndex);
     window.scrollTo(0, 0); // Add this line
-
-
   })();
+
+//Achievement Section
+const achievements = {
+   "Academics": { rank: 2, info: "2nd Rank in Semester" },
+   "Web Wizard": { rank: 3, info: "3rd Prize in InfoSpark (A Tech Competition) at PCP" },
+   // Add more...
+};
+const graph = document.getElementById("graph");
+const maxHeight = 200;
+const maxRank = Math.max(...Object.values(achievements).map(a => a.rank));
+
+for (let key in achievements) {
+  const { rank, info } = achievements[key];
+  const height = maxHeight * ((maxRank + 1 - rank) / maxRank);
+
+  const bar = document.createElement("div");
+  bar.className = "bar";
+  bar.style.height = `${height}px`;
+
+  const hoverText = document.createElement("div");
+  hoverText.className = "hover-text";
+  hoverText.textContent = info;
+
+  const label = document.createElement("div");
+  label.className = "label";
+  label.textContent = key;
+
+  const infoText = document.createElement("div");
+  infoText.className = "info";
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "bar-wrapper";
+  wrapper.appendChild(hoverText);
+  wrapper.appendChild(bar);
+  wrapper.appendChild(label);
+  wrapper.appendChild(infoText);
+
+  graph.appendChild(wrapper);
+}
+
+
+const notices = [
+  {
+    img: "images/Web-Wizard-3rd-prize.jpg",
+    text: "3rd price \nWeb Wizard"
+  },
+  // Add more notices as needed...
+];
+
+const board = document.getElementById("board");
+
+notices.forEach(notice => {
+  
+  const note = document.createElement("div");
+  note.className = "note";
+  
+  const pin = document.createElement("div");
+  pin.innerHTML=`<i class="fa-solid fa-circle"></i>`;
+
+  // Random slight rotation
+  const angle = (Math.random() * 4 - 2).toFixed(2) + "deg";
+  note.style.setProperty("--rotate", angle);
+
+  const img = document.createElement("img");
+  img.src = notice.img;
+
+  const text = document.createElement("div");
+  text.className = "note-text";
+  text.textContent = notice.text;
+
+  const content = document.createElement('div');
+  content.className="note-content";
+
+  
+  note.appendChild(pin);
+  note.appendChild(content);
+  content.appendChild(img);
+  content.appendChild(text);
+  board.appendChild(note);
+});
+
+
+//Skill Section
+const data = [
+  { type: "skill", name: "C", level: 90 },
+  { type: "skill", name: "C++", level: 90 },
+  { type: "skill", name: "OOP", level: 90 },
+  { type: "skill", name: "Python 🐍", level: 80 },
+  { type: "skill", name: "HTML & CSS 🌐", level: 90 },
+  { type: "skill", name: "SQL", level: 90 },
+  { type: "skill", name: "DSA", level: 40 },
+
+  { type: "cert", name: "SQL Course", img: "images/sql.png" },
+  { type: "cert", name: "Python Course", img: "images/py.jpg" },
+  { type: "cert", name: "Prompt Engineering", img: "images/promptengg.jpg" }
+];
+
+function renderItems() {
+  const container = document.getElementById("grid");
+  container.innerHTML = "";
+
+  data.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("skill-card");
+    card.dataset.type = item.type;
+
+    if (item.type === "skill") {
+      card.classList.add("skill-box");
+      card.innerHTML = `
+        <h3>${item.name}</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: ${item.level}%"></div>
+        </div>
+      `;
+    } else {
+      card.classList.add("certificate-box");
+      card.innerHTML = `
+        <img src="${item.img}" alt="${item.name}" />
+        <p>${item.name}</p>
+      `;
+      card.onclick = () => openModal(item.img);
+    }
+
+    container.appendChild(card);
+  });
+}
+
+function filterItems(type) {
+  const cards = document.querySelectorAll(".skill-card");
+  cards.forEach(card => {
+    const match = type === "all" || card.dataset.type === type;
+    card.style.display = match ? "block" : "none";
+  });
+}
+
+function openModal(src) {
+  const modal = document.getElementById("modal");
+  document.getElementById("modal-img").src = src;
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+renderItems();
+

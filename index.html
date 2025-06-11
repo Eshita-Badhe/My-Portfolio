@@ -14,15 +14,14 @@
 
     <!-- Scroll Nav Bar -->
     <header id="scroll-navbar" class="scroll-nav">
-        <div class="top-name">Eshita Badhe</div>
+        <div class="top-name"><a href="index.html"> Eshita Badhe</a></div>
         <div class="nav-links">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#edu">Education</a></li>
-                <li><a href="#cert">Achievements</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -34,7 +33,7 @@
             <div class="profile-pic"></div>
         </div>
         <div class="profile-text">
-            <a href="index.html" title="Eshita's Portfolio"><div class="name">Eshita Badhe</div></a>
+            <a href="index.html" title="Eshita's Portfolio"><div class="name">Eshita Badhe</div></a>            
             <div class="icons">
             <a href="#" title="Email" onclick="navigator.clipboard.writeText('sge.eshita31gb@gmail.com'); alert('Email copied!');"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/eshita-badhe-31gb/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
@@ -51,7 +50,13 @@
         <!--About section-->
         <div id="about" class="about">
             <div class="terminal">
-                <div class="title"><i class="fa-solid fa-code"></i>   <span>About Me</span></div>
+                <div class="title">
+                    <div><i class="fa-solid fa-code"></i>   <span>About Me</span></div>
+                   <a href="resume.pdf" download class="resume-btn">
+                        <span>Download Resume</span>
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                </div>
                 <div class="code">
                     <pre>Hi👋, I’m Eshita Badhe, a passionate Software and Web Developer currently in my third year of Diploma in Computer Science at Government Polytechnic, Pune. I’m someone who loves diving into the depths of programming, exploring new technical skills, tech events, and building projects that reflect what I learn 💻✨. I’ve gained hands-on experience with C, C++, Python, OOP, HTML, CSS, JavaScript, and SQL, and I enjoy turning these skills into something real and exciting.
 
@@ -118,16 +123,37 @@ My motivation -
                 </section>
             </main>
         </div>
-        <div id="cert" class="achievements">Achievements Section</div>
-        <div id="skills" class="skills">Skills Section</div>
-        <div class="resume">Resume Section</div>
-        <div id="contact" class="contact">Contact Section</div>
+        <div id="achievements" class="sections" style="padding-top: 2rem;">Achievements</div>
+        <div class="achievements">
+            <div class="notice-board">
+                <div class="notice-title"><i class="fa-solid fa-map-pin"></i> NOTICE BOARD <i class="fa-solid fa-map-pin"></i></div>
+                <div class="board" id="board"></div>
+            </div>
+            <div class="graph-container" id="graph"></div>
+        </div>
+        <div id="skills" class="skills">
+            <div class="sections">
+                Skills and Certifications
+            </div>
+            
+             <div class="filters">
+                <button onclick="filterItems('all')">All</button>
+                <button onclick="filterItems('skill')">Skills</button>
+                <button onclick="filterItems('cert')">Certificates</button>
+            </div>
+
+            <div class="grid" id="grid"></div>
+
+            <div class="modal" id="modal" onclick="closeModal()">
+                <img id="modal-img" />
+            </div>
+        </div>
     </div>
 
     <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     
     <footer>
-        Made by Eshita
+        Made by Eshita GB
     </footer>
 
     <script src="script.js"></script>
