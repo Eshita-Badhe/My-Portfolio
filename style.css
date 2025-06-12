@@ -216,26 +216,7 @@ footer {
   }
 
   .scroll-nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .nav-links {
-    width: 100%;
-    margin: 0;
-  }
-
-  .scroll-nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0 0;
-  }
-
-  .scroll-nav ul li a {
-    font-size: 0.8rem;
+    display: none;
   }
 
   footer {
