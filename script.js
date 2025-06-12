@@ -332,13 +332,14 @@ notices.forEach(notice => {
 
 //Skill Section
 const data = [
-  { type: "skill", name: "C", level: 90 },
-  { type: "skill", name: "C++", level: 90 },
-  { type: "skill", name: "OOP", level: 90 },
-  { type: "skill", name: "Python 🐍", level: 80 },
-  { type: "skill", name: "HTML & CSS 🌐", level: 90 },
-  { type: "skill", name: "SQL", level: 90 },
-  { type: "skill", name: "DSA", level: 40 },
+  { type: "skill", name: "<i class='fa-solid fa-laptop-code'></i> C", level: 90 },
+  { type: "skill", name: "<i class='fa-solid fa-laptop-code'></i> C++", level: 90 },
+  { type: "skill", name: "<i class='fa-solid fa-diagram-project'></i>  OOP", level: 90 },
+  { type: "skill", name: "<i class='fa-brands fa-python'></i> Python ", level: 80 },
+  { type: "skill", name: "<i class='fa-brands fa-html5'></i> HTML", level: 90 },
+  { type: "skill", name: "<i class='fa-brands fa-css3-alt'></i> CSS", level: 90 },
+  { type: "skill", name: "<i class='fa-solid fa-database'></i> SQL", level: 90 },
+  { type: "skill", name: "<i class='fa-solid fa-network-wired'></i> DSA", level: 40 },
 
   { type: "cert", name: "SQL Course", img: "images/sql.png" },
   { type: "cert", name: "Python Course", img: "images/py.jpg" },
