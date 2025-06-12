@@ -219,6 +219,10 @@ footer {
     display: none;
   }
 
+  .nav-links {
+    display: none;
+  }
+
   footer {
     font-size: 10px;
     padding: 10px 5px;
