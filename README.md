@@ -31,15 +31,13 @@ This is a fully responsive and dynamic portfolio built using HTML, CSS, JavaScri
         <pre><code>cd My-Portfolio</code></pre>
     </li>
     <li>Customize content in index.html, style.css, and script.js to make it your own!   </li>
-    <li>Run the application:Open index.html in your browser.    </li>
+    <li>Run the application: Open index.html in your browser.    </li>
 </ol>
 
 ## 💡 Customization Tips
-Change your profile image in the assets folder.
-
-Update projects, certificates, and skills dynamically via script.js.
-
-Replace mailto: and social links with your actual accounts.
+- Change your profile image in the assets folder.
+- Update projects, certificates, and skills dynamically via script.js.
+- Replace  social links with your actual accounts.
 
 ## 📸 Preview
 <img src="https://github.com/Eshita-Badhe/My-Portfolio/blob/main/images/preview.png" alt="Preview" style="width:75%;height:auto;">
@@ -62,4 +60,4 @@ Feel free to reach out.
 
 ---
 
-Let me know if you'd like this customized with your actual project links or [screenshot preview]("https://github.com/Eshita-Badhe/My-Portfolio/blob/main/images/preview.png").
+Let me know if you'd like this customized with your actual project links 
