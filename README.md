@@ -3,6 +3,9 @@
 Welcome to my personal portfolio website! 🌐  
 This is a fully responsive and dynamic portfolio built using HTML, CSS, JavaScript. It's designed to showcase my **projects**, **skills**, **education**, **certifications**, and **achievements** in a visually appealing and interactive way.
 
+## Demo 
+<a href="https://eshita-badhe.netlify.app/">My-Portfolio</a>
+
 ## 📌 Features
 
 - 🧑‍💼 About Me section
