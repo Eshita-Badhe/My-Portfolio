@@ -53,23 +53,28 @@ const projects = [
   { 
     title: "📘'Just to Read' Online Book Store UI",
     desc: "'Just to Read' is a static website of a online book store developed as part of my Web Page Design (WPD) course. The site is designed with simplicity and user experience in mind, providing a seamless reading interface.",
-    link: "https://just-to-read.netlify.app/", link_text: "Live Demo"
+    link: ["https://just-to-read.netlify.app/"], link_text: ["Live Demo"]
   },
   
   { 
     title: "🧩Quizee!",
     desc: "Quizee ! is a dynamic online quiz platform where users can test their knowledge across multiple categories. It is a simple, interactive web application built using HTML, CSS, and JavaScript. This project aims to provide an engaging quiz experience and can be easily customized to add more quiz categories or questions.",
-    link: "https://quizeeee.netlify.app/" , link_text: "Live Demo"
+    link: ["https://quizeeee.netlify.app/"] , link_text: ["Live Demo"]
   },
   { 
     title: "🎙️ Virtual News Reporter",
     desc: "Virtual News Reporter is an AI-based voice-controlled system that delivers personalized, real-time news summaries. Built with HTML, CSS, JS, Python, Gemini AI, GNewsAPI, and Google TTS/STT, it lets users select categories, listen to updates, and interact with the AI, making news more engaging and accessible.",
-    link: "https://github.com/Eshita-Badhe/Virtual-News_Reporter" , link_text: "GitHub Repository"
+    link: ["https://github.com/Eshita-Badhe/Virtual-News_Reporter"] , link_text: ["GitHub Repository"]
+  },
+  { 
+    title: "🛒 BudgetBuddy - Grocery Budget Optimizer (GBO)",
+    desc: "A full-stack web application that helps users optimize their grocery list based on a given budget, using a greedy algorithm approach.",
+    link: ["https://budgetbuddy-grocery-budget-optimizer.onrender.com/"] , link_text: ["Live Demo"]
   },
   { 
     title: "✌️ Sign Language Interpreter",
     desc: "Sign Language Interpreter is an AI-powered system that translates hand gestures into natural language text and speech. The app spports webcam and file upload inputs with userfriendly GUI, making sign language communication more accessible and interactive.",
-    link: "https://github.com/Eshita-Badhe/Sign-Language-Interpreter" , link_text: "GitHub Repository"
+    link: ["https://github.com/Eshita-Badhe/Sign-Language-Interpreter"] , link_text: ["GitHub Repository"]
   },
 ];
 
