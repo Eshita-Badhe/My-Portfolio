@@ -256,7 +256,6 @@ updateCarousel();
 
 //Achievement Section
 const achievements = {
-   "Academics": { rank: 2, info: "2nd Rank in Semester" },
    "Web Wizard": { rank: 3, info: "3rd Prize in InfoSpark (A Tech Competition) at PCP" },
    // Add more...
 };
