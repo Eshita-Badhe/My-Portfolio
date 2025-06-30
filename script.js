@@ -100,7 +100,15 @@ function updateCarousel() {
   cards.forEach((card, index) => {
     const diff = index - currentIndex;
     card.style.pointerEvents = 'none';
-
+  if (window.matchMedia("(max-width: 768px)").matches) {
+  // Mobile view logic here
+      card.style.transform = `translateX(0) scale(1.1)`;
+      card.style.zIndex = 3;
+      card.style.opacity = 1;
+      card.style.filter = 'none';
+      card.style.pointerEvents = 'auto';
+  }
+  else{
     if (diff === 0) {
       card.style.transform = `translateX(0) scale(1.1)`;
       card.style.zIndex = 3;
@@ -122,6 +130,7 @@ function updateCarousel() {
       card.style.filter = 'blur(5px)';
       card.style.boxShadow = 'none';
     }
+  }
   });
 }
 
@@ -256,6 +265,7 @@ updateCarousel();
 
 //Achievement Section
 const achievements = {
+   "Speech Competition": { rank: 3, info: "3rd Prize in Speech Competition on Temperance at School" },
    "Web Wizard": { rank: 3, info: "3rd Prize in InfoSpark (A Tech Competition) at PCP" },
    // Add more...
 };
