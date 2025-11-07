@@ -62,6 +62,11 @@ const projects = [
     link: ["https://quizeeee.netlify.app/"] , link_text: ["Live Demo"]
   },
   { 
+    title: "3DIAL – Interactive AI Avatar System",
+    desc: "Built an interactive AI model that brings digital avatars to life using Ready Player Me, Real-Time Voice Cloning, Wav2Lip, and Gemini AI.The system generates personalized 3D avatars, syncs lip movements with cloned speech, and enables intelligent voice-based conversations through Gemini.Designed for applications in virtual communication, education, and assistive technology.",
+    link: ["https://github.com/Eshita-Badhe/3DIAL---3D-Avatar-for-Virtual-Presence"] , link_text: ["GitHub Repository"]
+  },
+  { 
     title: "🎙️ Virtual News Reporter",
     desc: "Virtual News Reporter is an AI-based voice-controlled system that delivers personalized, real-time news summaries. Built with HTML, CSS, JS, Python, Gemini AI, GNewsAPI, and Google TTS/STT, it lets users select categories, listen to updates, and interact with the AI, making news more engaging and accessible.",
     link: ["https://github.com/Eshita-Badhe/Virtual-News_Reporter"] , link_text: ["GitHub Repository"]
@@ -172,7 +177,7 @@ updateCarousel();
   },
   {
     title: "Diploma",
-    description: "College: Government Polytechnic, Pune \nBranch: Computer Science \nDuration: 2023–2026  \nCurrent year: Third"
+    description: "College: Government Polytechnic, Pune \nBranch: Computer Science \nDuration: 2023–2026  \nCurrent year: Third \nPercentage: 95.65%"
   }
 ];
 
@@ -350,6 +355,7 @@ const data = [
   { type: "skill", name: "<i class='fa-solid fa-laptop-code'></i> C++", level: 90 },
   { type: "skill", name: "<i class='fa-solid fa-diagram-project'></i>  OOP", level: 90 },
   { type: "skill", name: "<i class='fa-brands fa-python'></i> Python ", level: 80 },
+  { type: "skill", name: "<i class='fa-brands fa-java'></i> Java ", level: 80 },
   { type: "skill", name: "<i class='fa-brands fa-html5'></i> HTML", level: 90 },
   { type: "skill", name: "<i class='fa-brands fa-css3-alt'></i> CSS", level: 90 },
   { type: "skill", name: "<i class='fa-solid fa-database'></i> SQL", level: 90 },
@@ -409,4 +415,5 @@ function closeModal() {
 }
 
 renderItems();
+
 
