@@ -264,50 +264,38 @@ updateCarousel();
   })();
 
 //Achievement Section
-const achievements = {
-   "Speech Competition": { rank: 3, info: "3rd Prize in Speech Competition on Temperance at School" },
-   "Web Wizard": { rank: 3, info: "3rd Prize in InfoSpark (A Tech Competition) at PCP" },
-   // Add more...
-};
-const graph = document.getElementById("graph");
-const maxHeight = 200;
-const maxRank = Math.max(...Object.values(achievements).map(a => a.rank));
-
-for (let key in achievements) {
-  const { rank, info } = achievements[key];
-  const height = maxHeight * ((maxRank + 1 - rank) / maxRank);
-
-  const bar = document.createElement("div");
-  bar.className = "bar";
-  bar.style.height = `${height}px`;
-
-  const hoverText = document.createElement("div");
-  hoverText.className = "hover-text";
-  hoverText.textContent = info;
-
-  const label = document.createElement("div");
-  label.className = "label";
-  label.textContent = key;
-
-  const infoText = document.createElement("div");
-  infoText.className = "info";
-
-  const wrapper = document.createElement("div");
-  wrapper.className = "bar-wrapper";
-  wrapper.appendChild(hoverText);
-  wrapper.appendChild(bar);
-  wrapper.appendChild(label);
-  wrapper.appendChild(infoText);
-
-  graph.appendChild(wrapper);
-}
-
-
-const notices = [
+const notices = [  
+  {
+    img: "images/speech.jpg",
+    text: "3rd Prize in Speech Competition on Temperance at School" 
+  },
   {
     img: "images/Web-Wizard-3rd-prize.jpg",
     text: "3rd price \nWeb Wizard"
   },
+  { 
+    img: "images/president-appointment.jpg", 
+    text: "Selected as President\nAssociation of Students, Computer Dept." 
+  },
+  { 
+    img: "images/iei-paper.jpg", 
+    text: "Research Paper Published in IEI Annual Technical Journal ---\n\"Virtual News Reporter: A Personalized News Companion\"" },  
+  {
+    img: "images/speech.jpg",
+    text: "3rd Prize in Speech Competition on Temperance at School" 
+  },
+  {
+    img: "images/Web-Wizard-3rd-prize.jpg",
+    text: "3rd price \nWeb Wizard"
+  },
+  { 
+    img: "images/president-appointment.jpg", 
+    text: "Selected as President\nAssociation of Students, Computer Dept." 
+  },
+  { 
+    img: "images/iei-paper.jpg", 
+    text: "Research Paper Published in IEI Annual Technical Journal ---\n\"Virtual News Reporter: A Personalized News Companion\"" }
+  
   // Add more notices as needed...
 ];
 
@@ -346,13 +334,13 @@ notices.forEach(notice => {
 
 //Skill Section
 const data = [
-  { type: "skill", name: "<i class='fa-solid fa-laptop-code'></i> C", level: 90 },
-  { type: "skill", name: "<i class='fa-solid fa-laptop-code'></i> C++", level: 90 },
-  { type: "skill", name: "<i class='fa-solid fa-diagram-project'></i>  OOP", level: 90 },
   { type: "skill", name: "<i class='fa-brands fa-python'></i> Python ", level: 80 },
+  { type: "skill", name: "<i class='fa-solid fa-diagram-project'></i>  OOP", level: 90 },
   { type: "skill", name: "<i class='fa-brands fa-html5'></i> HTML", level: 90 },
   { type: "skill", name: "<i class='fa-brands fa-css3-alt'></i> CSS", level: 90 },
-  { type: "skill", name: "<i class='fa-solid fa-database'></i> SQL", level: 90 },
+  { type: "skill", name: "<i class='fa-brands fa-js'></i> JS", level: 80 },
+  { type: "skill", name: "<i class='fa-brands fa-react'></i> React", level: 80 },
+  { type: "skill", name: "<i class='fa-solid fa-database'></i> MySQL", level: 90 },
   { type: "skill", name: "<i class='fa-solid fa-network-wired'></i> DSA", level: 40 },
 
   { type: "cert", name: "SQL Course", img: "images/sql.png" },
