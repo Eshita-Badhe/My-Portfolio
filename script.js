@@ -285,22 +285,6 @@ const notices = [
   { 
     img: "images/iei-paper.jpg", 
     text: "Research Paper Published in IEI Annual Technical Journal ---\n\"Virtual News Reporter: A Personalized News Companion\"" },  
-  {
-    img: "images/speech.jpg",
-    text: "3rd Prize in Speech Competition on Temperance at School" 
-  },
-  {
-    img: "images/Web-Wizard-3rd-prize.jpg",
-    text: "3rd price \nWeb Wizard"
-  },
-  { 
-    img: "images/president-appointment.jpg", 
-    text: "Selected as President\nAssociation of Students, Computer Dept." 
-  },
-  { 
-    img: "images/iei-paper.jpg", 
-    text: "Research Paper Published in IEI Annual Technical Journal ---\n\"Virtual News Reporter: A Personalized News Companion\"" }
-  
   // Add more notices as needed...
 ];
 
